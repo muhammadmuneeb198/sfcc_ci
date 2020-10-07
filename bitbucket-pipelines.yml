@@ -146,7 +146,7 @@ pipelines:
                     #- npm install
                     #- npm run compile:scss && npm run compile:js
                     #- cd ../
-                    #- echo "i am done 1"                    
+                    - echo "i am done 1"                    
         Sandbox3:
            - step:
                 name: Manual Build to Sandbox3
