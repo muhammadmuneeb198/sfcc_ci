@@ -17,33 +17,33 @@ pipelines:
                     - storefront-reference-architecture/cartridges/app_custom_lbct/cartridge/static/default/js/**
                 script:
                     # - echo $CARTRIDGES_TO_UPLOAD  + "---password:" + $DEVELOPMENT_PASSWORD + "---username" + $DEVELOPMENT_USERNAME
-                    - cd storefront-reference-architecture
+                    - cd /opt/bitnami/jenkins/jenkins_home/sfcc-rapid-dev/storefront-reference-architecture
                     - npm install
                     - npm run compile:scss && npm run compile:js && npm run compile:fonts
-                    # - cd ../
-                    # - cd plugin_wishlists
-                    # - npm install
-                    # - npm run compile:scss && npm run compile:js
-                    # - cd ../
-                    # - cd plugin_cartridge_merge
-                    # - npm install
-                    # - npm run compile:scss && npm run compile:js
-                    # - cd ../
-                    # - cd plugin_giftregistry
-                    # - npm install
-                    # - npm run compile:scss && npm run compile:js
-                    # - cd ../
-                    # - cd plugin_productcompare
-                    # - npm install
-                    # - npm run compile:scss && npm run compile:js
-                    # - cd ../
-                    # - cd plugin_instorepickup
-                    # - npm install
-                    # - npm run compile:scss && npm run compile:js
-                    # - cd ../   
-                    # - cd plugin-applepay
-                    # - npm install
-                    # - npm run compile:scss && npm run compile:js
+                    - cd ../
+                    - cd plugin_wishlists
+                    - npm install
+                    - npm run compile:scss && npm run compile:js
+                    - cd ../
+                    - cd plugin_cartridge_merge
+                    - npm install
+                    - npm run compile:scss && npm run compile:js
+                    - cd ../
+                    - cd plugin_giftregistry
+                    - npm install
+                    - npm run compile:scss && npm run compile:js
+                    - cd ../
+                    - cd plugin_productcompare
+                    - npm install
+                    - npm run compile:scss && npm run compile:js
+                    - cd ../
+                    - cd plugin_instorepickup
+                    - npm install
+                    - npm run compile:scss && npm run compile:js
+                    - cd ../   
+                    - cd plugin-applepay
+                    - npm install
+                    - npm run compile:scss && npm run compile:js
                     - cd ../
                     - echo "Finished compiling Catriges"
                     - mkdir $CARTRIDGES_DIRECTORY
