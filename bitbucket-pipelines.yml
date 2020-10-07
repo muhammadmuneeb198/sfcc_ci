@@ -17,7 +17,7 @@ pipelines:
                     - storefront-reference-architecture/cartridges/app_custom_lbct/cartridge/static/default/js/**
                 script:
                     # - echo $CARTRIDGES_TO_UPLOAD  + "---password:" + $DEVELOPMENT_PASSWORD + "---username" + $DEVELOPMENT_USERNAME
-                    - cd /opt/bitnami/jenkins/jenkins_home/sfcc-rapid-dev/storefront-reference-architecture
+                    - cd storefront-reference-architecture
                     - npm install
                     - npm run compile:scss && npm run compile:js && npm run compile:fonts
                     - cd ../
