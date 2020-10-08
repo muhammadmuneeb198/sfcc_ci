@@ -62,7 +62,7 @@ pipelines:
                     - echo "$CARTRIDGES_TO_UPLOAD"  + "---password:" + "$DEVELOPMENT_PASSWORD" + "---username" + "$DEVELOPMENT_USERNAME"
                     - env; [ -z "$CARTRIDGES_TO_UPLOAD" ] && CARTRIDGES_TO_UPLOAD="$(ls -dm */ | sed 's#/##g' | tr -d '[:space:]' | sed 's/node_modules\,//g' | sed 's/\,node_modules//g' | sed 's/bin\,//g' | sed 's/\,bin//g')"
                     - GITBRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-                    - GITBRANCH="${GITBRANCH//[.\/]/-}"
+                    - #GITBRANCH="${GITBRANCH//[.\/]/-}"
                     - GITHASH=$(git rev-parse --short HEAD)
                     - ../storefront-reference-architecture/node_modules/.bin/dwupload --hostname $DEVELOPMENT_HOSTNAME --username $DEVELOPMENT_USERNAME --password "$DEVELOPMENT_PASSWORD" --code-version "development-$BITBUCKET_BUILD_NUMBER-$GITBRANCH-$GITHASH" --cartridge $CARTRIDGES_TO_UPLOAD
                     - cd ../
